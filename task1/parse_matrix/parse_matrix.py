@@ -1,5 +1,4 @@
 
-
 def parse_matrix(raw: str) -> list[int]:
     out = []
     lasdigit = ''
@@ -17,4 +16,6 @@ def parse_matrix(raw: str) -> list[int]:
                 out.append(int(lasdigit))
                 last = False
                 lasdigit = ''
+    if last:
+        out.append(int(lasdigit))
     return out
